@@ -1,0 +1,62 @@
+<main>
+    <div class="contact-image">
+        <section class="container">
+            <div class="site-contact">
+
+                <div class="posts">
+                    <form 
+                        enctype="multipart/form-data">
+                        <div class="contact">
+
+                            <p>Name <span>(*)</span> :</p>
+                            <input type="text" class="input" asp-for="Ten" placeholder="Your Name" required>
+
+                            <p>Email <span>(*)</span> :</p>
+                            <input type="email" class="input" asp-for="Email" placeholder="Your Email" required>
+
+                            <p>Phone <span>(*)</span> :</p>
+                            <input type="number" class="input" asp-for="SDT" placeholder="Your Number" required>
+
+                            <p>Feedback <span>(*)</span> :</p>
+                            <textarea name="" cols="30" rows="10" asp-for="Feedback" required></textarea>
+                            <br>
+                            <button class="btn" onclick="alert('Send Success')">Sent</button>
+
+                        </div>
+                    </form>
+                </div>
+
+                <div class="contact-map">
+                    <div class="map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d951.9717973152364!2d106.66710217804282!3d10.775523279976595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ed8cf596af7%3A0x33ec617b79a69949!2zVHLGsOG7nW5nIMSQ4bqhaSBI4buNYyBOZ2_huqFpIE5n4buvIC0gVGluIEjhu41jIFRQLiBIQ00!5e0!3m2!1svi!2s!4v1589044121994!5m2!1svi!2s"
+                            width="400" height="300" frameborder="0" style="border:0;" allowfullscreen=""
+                            aria-hidden="false" tabindex="0"></iframe>
+                        <br>
+                        <a
+                            href="https://www.google.com/maps/place/Tr%C6%B0%E1%BB%9Dng+%C4%90%E1%BA%A1i+H%E1%BB%8Dc+Ngo%E1%BA%A1i+Ng%E1%BB%AF+-+Tin+H%E1%BB%8Dc+TP.+HCM/10.7755233,106.6671022,19.04z/data=!4m5!3m4!1s0x31752ed8cf596af7:0x33ec617b79a69949!8m2!3d10.7761352!4d106.6676639?hl=vi-VN">View
+                            Larger </a>
+
+                    </div>
+
+                    <div class="info">
+                        <div class="info-head">
+                            <h3>Blog Information</h3>
+                            <p>155 Su Van Hanh</p>
+                            <p>Phone:(00) 222 666 444</p>
+                            <p>Fax: (000) 000 00 00 0</p>
+                            <p>Email: vucarot2019@gmail.com</p>
+                            <p>Follow on: 
+                                <a href="https://www.facebook.com/profile.php?id=100013008587236"><i
+                                        class="fab fa-facebook-f"></i><span>Facebook</span></a> ,
+                                <a href="https://www.facebook.com/profile.php?id=100013008587236"><i
+                                        class="fab fa-twitter"></i> <span>Twitter</span></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+<app-footer></app-footer>

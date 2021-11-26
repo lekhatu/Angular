@@ -1,0 +1,9 @@
+h1{
+    text-align: center;
+}
+
+button.check:hover{
+    background: #ffadad;
+    border: white;
+}
+

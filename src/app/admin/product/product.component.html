@@ -1,0 +1,59 @@
+<div class="contact-image">
+    <section class="container">
+        <div class="site-contact">
+            <div class="posts" style="text-align: center;">
+                <form novalidate autocomplete="off" #form ="ngForm" (ngSubmit)="onSubmit(form)">
+                    <div class="contact">
+                        <input type="hidden" name="productId" [value]="service.formData.productId">
+                        <div class="form-group">
+                            <p>Product Name</p>
+                            <input class="input" placeholder="Product Name" name="productName" #productName="ngModel"
+                                [(ngModel)]="service.formData.productName" required [class.invalid]="productName.invalid && productName.touched">
+                        </div>
+                        <div class="form-group">
+                            <p>ProductQuantity</p>
+                            <input class="input" type="number" placeholder="Product Quantity" name="productQuantity"
+                                #productQuantity="ngModel" [(ngModel)]="service.formData.productQuantity" required [class.invalid]="productQuantity.invalid && productQuantity.touched">
+                        </div>
+                        <div class="form-group">
+                            <p>Product Image</p>
+                            <input class="input" placeholder="Product Image" name="productImage" #productImage="ngModel"
+                                [(ngModel)]="service.formData.productImage" required [class.invalid]="productImage.invalid && productImage.touched">
+                        </div>
+                        <div class="form-group">
+                            <p>Product Price</p>
+                            <input class="input" type="number" placeholder="Product Price" name="productPrice" #productPrice="ngModel"
+                                [(ngModel)]="service.formData.productPrice" required [class.invalid]="productPrice.invalid && productPrice.touched">
+                        </div>
+                        <div class="form-group">
+                            <p>Create Date</p>
+                            <input class="input" type="date" placeholder="Create Date" name="createDate" #createDate="ngModel"
+                                [(ngModel)]="service.formData.createDate" required [class.invalid]="createDate.invalid && createDate.touched"> 
+                        </div>
+                        <div class="form-group">
+                            <p>Descriptions</p>
+                            <input class="input" placeholder="Descriptions" name="descriptions" #descriptions="ngModel"
+                                [(ngModel)]="service.formData.descriptions" required [class.invalid]="descriptions.invalid && descriptions.touched">
+                        </div>
+                        <div class="form-group">
+                            <p>Category</p>
+                            <input class="input" placeholder="Category" name="categoryId" #categoryId="ngModel"
+                                [(ngModel)]="service.formData.categoryId" required [class.invalid]="categoryId.invalid && categoryId.touched">
+                        </div>
+                        <br>
+                        <hr>
+                        <br>
+                        <div class="form-group">
+                            <button class="btn" type="submit" style="background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);" [disabled]="form.invalid">Submit</button>
+                        </div>
+                        <br>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+
+

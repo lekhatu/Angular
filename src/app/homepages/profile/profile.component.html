@@ -1,0 +1,17 @@
+
+<table>
+    <thead>
+        <tr class="tb1">
+            <th>User Name</th>
+            <th>Full Name</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngIf="userDetails" class="tb1">
+            <td >{{userDetails.userName}}</td>
+            <td >{{userDetails.fullName}}</td>
+            <td >{{userDetails.email}}</td>
+        </tr>
+    </tbody>
+</table>

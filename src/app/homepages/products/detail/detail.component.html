@@ -1,0 +1,73 @@
+<main>
+    <div class="small-container single-product">
+        <div class="row" >
+
+            <div class="col-2">
+                <img src="{{pd.productImage}}" width="100%" alt="{{pd.productName}}">
+            </div>
+
+            <div class="col-2">
+                <p>Home / iPhone</p>
+                <h1>{{pd.productName}}</h1>
+                <h3 style="color: red;">{{pd.productPrice}} $</h3>
+                <select>
+                    <option value="">Select Memory</option>
+                    <option value="">64GB</option>
+                    <option value="">128GB</option>
+                    <option value="">256GB</option>
+                    <option value="">512GB</option>
+                </select>
+                <br>
+                <input type="number" value="1">
+                <button class="btn" style="padding: 1rem 1rem;background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);">
+                    <a routerLink="/detail/{{pd.productId}}/carts">Add To Cart</a>
+                </button>
+                <h3>
+                    Product Details
+                    <i>
+                        <div class="fa fa-indent"></div>
+                    </i>
+                </h3>
+                <br>
+                <p>{{pd.descriptions}}</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!--------title------------>
+
+    <div class="small-container">
+        <div class="row row-2">
+            <h2>Related Products</h2>
+            <p>View More</p>
+        </div>
+    </div>
+
+    <!--------------Product-------------->
+
+
+    <div class="small-container">
+
+
+
+        <div class="row">
+            <div class="col-4" *ngFor="let pd of service.list; let i = detail" [pd]="pd" [detail]="i">
+                <a style="cursor: pointer;" >
+                    <img [src]="pd.productImage" alt="{{ pd.productName }}">
+                    <h4>{{ pd.productName }}</h4>
+                </a>
+                <div class="rating">
+                    <i><div class="fa fa-star"></div></i>
+                    <i><div class="fa fa-star"></div></i>
+                    <i><div class="fa fa-star"></div></i>
+                    <i><div class="fa fa-star"></div></i>
+                    <i><div class="fa fa-star-o"></div></i>
+                </div>
+                <p>{{pd.productPrice}} $</p>
+            </div>
+        </div>
+    </div>
+</main>
+
+<app-footer></app-footer>

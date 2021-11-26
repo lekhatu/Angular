@@ -1,0 +1,45 @@
+<div class="hero">
+    <div class="form-box">
+        <div class="button-box">
+            <div id="btn"></div>
+            <button type="button" class="toggle-btn btn1" routerLink="/login" onclick="login()">Login </button>
+            <button type="button" class="toggle-btn btn2" routerLink="/register" onclick="register()">Register </button>
+        </div>
+
+        <form id="register" class="input-group" [formGroup]="service.formModel" autocomplete="off"
+            (submit)="onSubmit()">
+
+            <div class="form-group">
+               
+                <input placeholder="Full Name" class="input-field" formControlName="fullName">
+
+            </div>
+            <div class="form-group">
+               
+                <input placeholder="User Name" class="input-field" formControlName="userName">
+            </div>
+            <div class="form-group">
+               
+                <input placeholder="Email" class="input-field" formControlName="email">
+
+            </div>
+
+            <div formGroupName="passwords">
+                <div class="form-group required">
+                   
+                    <input placeholder="Password" type="password"class="input-field" formControlName="password">
+
+                </div>
+                <div class="form-group required">
+                   
+                    <input placeholder="Confirm Password" type="password" class="input-field" formControlName="confirmPassword">
+
+                </div>
+            </div>
+            <br>
+            <button type="submit" class="submit-btn" [disabled]="!service.formModel.valid">Register</button>
+        </form>
+    </div>
+
+</div>
+

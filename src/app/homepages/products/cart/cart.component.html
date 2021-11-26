@@ -1,0 +1,42 @@
+<main>
+    <div class="small-container cart-page">
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Subtotal</th>
+            </tr>
+
+            <tr>
+                <td>{{pd.productId}}</td>
+                <td>
+                    <div class="cart-info">
+                        <img src={{pd.productImage}}>
+                        <div>
+                            <p>{{pd.productName}}</p>
+                            <small>{{pd.productPrice}} $</small>
+                            <a>Remove</a>
+                        </div>
+                    </div>
+                </td>
+                <td>{{pd.productQuantity}}</td>
+                <td>{{pd.productPrice}} $</td>
+            </tr>
+        </table>
+        <div class="total-price">
+            <table>
+                <tr>
+                    <td>Subtotal</td>
+                    <td>{{pd.productPrice}} $</td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td>{{pd.productPrice}} $</td>
+                </tr>
+            </table>
+        </div>
+        <button class="btn" style="float:right"><a routerLink="/detail/{{pd.productId}}/carts/checkout">Check Out</a></button>
+    </div>
+</main>
+<app-footer></app-footer>

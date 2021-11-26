@@ -1,0 +1,76 @@
+
+
+main .site-contact {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    /*.posts .contact*/
+}
+
+.contact span {
+    color: red;
+}
+
+.contact .input {
+    border: none;
+    border-bottom: 1.5px solid #16b4b9;
+    width: 50%;
+    padding: .8rem 0 .8rem;
+    background: rgba(255,0,0,0);
+    font-family: var(--Josefin);
+    font-size: 1rem;
+}
+
+textarea {
+    width: 80%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 1.5px solid #16b4b9;
+    border-radius: 4px;
+    resize: none;
+    background: rgba(255,0,0,0);
+    font-family: var(--Josefin);
+    font-size: 1rem;
+}
+
+.contact input::-webkit-input-placeholder {
+    color: #16b4b9;
+    font-size: 1rem;
+    font-weight: 200;
+}
+
+
+
+main .contact .btn {
+    margin: 1.8rem;
+    background: var(--sky);
+    margin-left: 13rem;
+}
+
+    main .contact .btn:hover {
+        background: transparent;
+        border: 1px solid var(--midnight);
+        color: var(--bg-color);
+    }
+
+main .contact-map a {
+    font-family: var(--Lexend);
+    font-size: 1rem;
+}
+
+    main .contact-map a:hover {
+        color: #7a65b4;
+    }
+
+main .contact-map .info-head i:hover {
+    color: #7a65b4;
+}
+
+
+/* for invalid form controls*/
+input.invalid{
+    border-color: red;
+}
+
+
+

@@ -1,0 +1,30 @@
+<div class="contact-image">
+    <section class="container">
+        <div class="site-contact">
+            <div class="posts" style="text-align: center;">
+                <form novalidate autocomplete="off" #form ="ngForm" (ngSubmit)="onSubmit(form)">
+                    <div class="contact">
+                        <input type="hidden" name="categoryId" [value]="service.formData.categoryId">
+                        <div class="form-group">
+                            <p>Product Name</p>
+                            <input class="input" placeholder="Category Name" name="categoryName" #categoryName="ngModel"
+                                [(ngModel)]="service.formData.categoryName" required [class.invalid]="categoryName.invalid && categoryName.touched">
+                        </div>
+                        
+                        <br>
+                        <hr>
+                        <br>
+                        <div class="form-group">
+                            <button class="btn" type="submit" style="background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);" [disabled]="form.invalid">Submit</button>
+                        </div>
+                        <br>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+
+

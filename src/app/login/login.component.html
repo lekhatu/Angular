@@ -1,0 +1,19 @@
+<div class="hero">
+    <div class="form-box">
+        <div class="button-box">
+            <div id="btn"></div>
+            <button type="button" class="toggle-btn btn1" routerLink="/login" onclick="login()">Login </button>
+            <button type="button" class="toggle-btn btn2" routerLink="/register" onclick="register()">Register </button>
+        </div>
+        <form id="login" class="input-group" #form='ngForm' autocomplete="off" (submit)="onSubmit(form)">
+            <input type="text" class="input-field" placeholder="User Name"  #userName="ngModel" name="userName"
+                [(ngModel)]="formModel.userName" required>
+            <input type="password" class="input-field" placeholder="Enter Password" #password="ngModel" name="password"
+                [(ngModel)]="formModel.password" required>
+            <input type="checkbox" class="check-box"><span>Remember Password</span>
+            <button type="submit" class="submit-btn" [disabled]="form.invalid">Login</button>
+        </form>
+
+    </div>
+
+</div>

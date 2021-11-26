@@ -1,0 +1,18 @@
+<table>
+    <thead>
+        <tr>
+            <th>Category Id</th>
+            <th>Category Name</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor ="let sp of service.list">
+            <td (click)="populateForm(sp)">{{ sp.categoryId }}</td>
+            <td (click)="populateForm(sp)">{{ sp.categoryName }}</td>
+            <td>
+                <i class="far fa-trash-alt fa-lg text-danger" (click)="onDelete(sp.categoryId)"></i>
+            </td>
+        </tr>
+    </tbody>
+</table>

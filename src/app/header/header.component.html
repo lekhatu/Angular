@@ -1,0 +1,46 @@
+
+ <div class="header">
+    <nav class="nav">
+        <div class="nav-menu flex-row">
+            <div class="nav-brand">
+                <a href="#" class="text-gray" routerLink="/homepages">TS-Store</a>
+            </div>
+            <div class="toggle-collapse">
+                <div class="toggle-icons">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            <div>
+                <ul class="nav-items">
+                    <li class="nav-link">
+                        <a href="#" style="cursor: pointer;" routerLink="/homepages">Home</a>
+                    </li>
+                    <li class="nav-link">
+                        <a style="cursor: pointer;" routerLink="/products">Product</a>
+                    </li>
+                    <li class="nav-link">
+                        <a style="cursor: pointer;" routerLink="/contact-us">Contact Us</a>
+                    </li>
+                    <li class="nav-link">
+                        <a style="cursor: pointer;" routerLink="/admin">Admin</a>
+                    </li>
+                    <li class="nav-link">
+                        <a style="cursor: pointer;" routerLink="/category">Category</a>
+                    </li>
+                   
+                </ul>
+            </div>
+            <div class="social text-gray">
+                <a href="#"><i class="fab fa-facebook-square"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+
+                <a *ngIf="!userDetails" routerLink="/login"><span class="login">Login</span></a>
+                <a *ngIf="userDetails" routerLink="/profile"><span class="login">{{userDetails.userName}}</span></a>
+                <a *ngIf="userDetails" style="cursor: pointer;padding-left: 5px;" (click)="onLogout()" (click)="reloadCurrentPage()"><span>Logout</span></a>
+            </div>
+        </div>
+        
+    </nav>
+</div>

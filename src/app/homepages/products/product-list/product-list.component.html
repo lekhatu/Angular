@@ -1,0 +1,52 @@
+<main>
+    <div class="small-container">
+        <div class="row row-2">
+            <h2>All Products</h2>
+            <select>
+                <option value="">Default Shorting</option>
+                <option value="">Short by price</option>
+                <option value="">Short by popular</option>
+                <option value="">Short by rating</option>
+                <option value="">Short by sale</option>
+            </select>
+        </div>
+        <div class="row" style="flex-wrap: wrap;">
+                <div class="col-4" *ngFor="let pd of service.list; let i = detail" [pd]="pd" [detail]="i">
+                    <a style="cursor: pointer;"  routerLink="/products/{{pd.productId}}/detail">
+                        <img [src]="pd.productImage" alt="{{ pd.productName }}">
+                        <h4>{{ pd.productName }}</h4>
+                    </a>
+                    <div class="rating">
+                        <i>
+                            <div class="fa fa-star"></div>
+                        </i>
+                        <i>
+                            <div class="fa fa-star"></div>
+                        </i>
+                        <i>
+                            <div class="fa fa-star"></div>
+                        </i>
+                        <i>
+                            <div class="fa fa-star"></div>
+                        </i>
+                        <i>
+                            <div class="fa fa-star-o"></div>
+                        </i>
+                    </div>
+                    <p>{{ pd.productPrice }} $</p>
+                    <div>
+                        <a class="btn" routerLink="/products/{{pd.productId}}/detail" ><span>Details</span></a> |
+                        <a class="btn" routerLink="/detail/{{pd.productId}}/carts"><span>Buy now</span></a>
+                    </div>
+                </div>
+        </div>
+        <div class="page-btn">
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span>&#8594;</span>
+        </div>
+    </div>
+</main>
+<app-footer></app-footer>
